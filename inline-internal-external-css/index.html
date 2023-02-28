@@ -4,18 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="external.css"> <!--external css-->
+    <link rel="stylesheet" type="text/css" href="external.css" />
+    <!--external css-->
     <!--internal css-->
     <style>
-        .test2{
-            font-size: 20px;
-            color: black;
-        }
+      .test2 {
+        font-size: 20px;
+        color: black;
+      }
+      li:nth-child(-n+3){
+        border: 1.5px solid orange;
+        margin-bottom: 1px;
+        width: 100px;
+        height: 20px;
+
+      }
+      li:nth-child(even){
+        background-color: lightyellow;
+        margin-bottom: 1px;
+        width: 100px;
+        height: 20px;
+      }
+      p{
+        font-size: 12px;
+      }
+      p:nth-child(even){
+        color:red;
+        border: solid 2px blue;
+      }
+    
     </style>
   </head>
   <body>
-    <div style="font-size: 20px;color: aqua;">Hello World</div> <!--inline css-->
+    <div style="font-size: 20px; color: aqua">Hello World</div>
+    <!--inline css-->
     <div class="test">hello world</div>
     <div class="test2">hello world</div>
+    <ul>
+        <li>kwik</li>
+        <li>kwek</li>
+        <li>kwak</li>
+        <li>kwik</li>
+        <li>kwek</li>
+        <li>kwak</li>
+        <li>kwik</li>
+        <li>kwek</li>
+        <li>kwak</li>
+    </ul>
+    <p>hello ik zen joeri</p>
+    <p>hello ik zen joeri</p>
+    <p>hello ik zen joeri</p>
+    <p>hello ik zen joeri</p>
+    <p>hello ik zen joeri</p>
+    <p>hello ik zen joeri</p>
   </body>
 </html>
