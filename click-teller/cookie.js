@@ -1,10 +1,17 @@
-/*const clickbutton = document.querySelector(".bigcookie");
-clickbutton.click();
-clickbutton.addEventListener("click")
-
 
 let count = 0;
+const cookieBtn = document.querySelector('.btnCookie');
+cookieBtn.addEventListener("click",clickCookie)
 
-if(clickbutton === "click"){
-    count++;
-}*/
+const countCookie = document.querySelector(".counter");
+
+function clickCookie(){
+  count++;
+  countCookie.innerText = count;
+  
+}
+
+
+
+
+

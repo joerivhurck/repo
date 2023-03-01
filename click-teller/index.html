@@ -6,27 +6,29 @@
     <title>Document</title>
     <style>
       .container {
+        background-color: grey;
         width: 100%;
-        height: 500px;
-      }
-      .bigcookie {
+        height: 100vh;
         display: flex;
         justify-content: center;
-        margin-top: 50px;
+        align-items: center;
+        flex-direction: column;
       }
-      .count {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
+      .counter {
+        background-color: white;
+        border: 1px solid black;
+        width: 100px;
+        height: 20px;
+        margin-bottom: 20px;
       }
     </style>
+    <script defer src="cookie.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="count"><input type="text" />
-    </div>
-      <div class="bigcookie">
-        <button>COOKIE</button>
+      <div class="counter"></div>
+      <div class="buttonContainer">
+        <button class="btnCookie">cookie</button>
       </div>
     </div>
   </body>
