@@ -5,10 +5,10 @@ cookieBtn.addEventListener("click",clickCookie)
 
 const countCookie = document.querySelector(".counter");
 
+
 function clickCookie(){
   count++;
   countCookie.innerText = count;
-  
 }
 
 
