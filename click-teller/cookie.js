@@ -12,14 +12,28 @@ function clickCookie(){
 }
 
 const cursorBtn = document.querySelector('.cursor');
-cursorBtn.disabled = true;
+
 
 const omaBtn = document.querySelector('.oma');
-omaBtn.disabled = true;
+
+
+function disable(){
+  cursorBtn.disabled = true;
+  omaBtn.disabled = true;
+}
+
+function enable(){
+  cursorBtn.disabled = false;
+  omaBtn.disabled = false;
+}
 
 
 
-
+if(countCookie.innerText === "10"){
+  enable();
+}else{
+  disable();
+}
 
 
 
