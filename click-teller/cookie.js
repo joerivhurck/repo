@@ -11,6 +11,14 @@ function clickCookie(){
   countCookie.innerText = count;
 }
 
+const cursorBtn = document.querySelector('.cursor');
+cursorBtn.disabled = true;
+
+const omaBtn = document.querySelector('.oma');
+omaBtn.disabled = true;
+
+
+
 
 
 
