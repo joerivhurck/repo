@@ -20,9 +20,6 @@ function disable(){
   omaBtn.disabled = true;
 }
 
-
-
-
 function powerLock(){
   countCookie.addEventListener('DOMSubtreeModified',function(){
     if(parseInt(countCookie.textContent,10) >= 10){
