@@ -1,0 +1,23 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joerivhurck/repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joerivhurck/repo/issues"
+  },
+  "homepage": "https://github.com/joerivhurck/repo#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+  
+}
