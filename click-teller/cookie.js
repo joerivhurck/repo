@@ -38,8 +38,6 @@ function cursor() {
   countCookie.innerText = newCounter
 }
 
-cursorBtn.addEventListener('click', cursor)
-
 function ButtonStyle() {
   const styleCursor = document.querySelector('.cursor')
   styleCursor.classList.add('btn')
@@ -48,6 +46,8 @@ function ButtonStyle() {
   styleBtnCookie.classList.add('btn')
   styleBtnCookie.classList.add('btn-primary')
 }
+
+cursorBtn.addEventListener('click', cursor)
 
 powerLock()
 disable()
