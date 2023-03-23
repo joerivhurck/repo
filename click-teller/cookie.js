@@ -1,55 +1,54 @@
+let count = 0
+let teller = 0
 
-let count = 0;
+const cookieBtn = document.querySelector('.btnCookie')
+cookieBtn.addEventListener('click', clickCookie)
 
-const cookieBtn = document.querySelector('.btnCookie');
-cookieBtn.addEventListener("click",clickCookie)
+const countCookie = document.querySelector('.counter')
 
-const countCookie = document.querySelector(".counter");
+const cursorBtn = document.querySelector('.cursor')
+const omaBtn = document.querySelector('.oma')
 
-const cursorBtn = document.querySelector('.cursor');
-const omaBtn = document.querySelector('.oma');
-
-
-function clickCookie(){
-  count++;
-  countCookie.innerText = count;
+function clickCookie() {
+  count++
+  teller++
+  countCookie.innerText = count
 }
 
-function disable(){
-  cursorBtn.disabled = true;
-  omaBtn.disabled = true;
+function disable() {
+  cursorBtn.disabled = true
+  cookieBtn.disabled = false
 }
 
-function powerLock(){
-  countCookie.addEventListener('DOMSubtreeModified',function(){
-    if(parseInt(countCookie.textContent,10) >= 10){
-      cursorBtn.disabled = false;
-    }else{
-      cursorBtn.disabled = true;
+function powerLock() {
+  countCookie.addEventListener('DOMSubtreeModified', function () {
+    if (teller < 10) {
+      cookieBtn.disabled = false
+      cursorBtn.disabled = true
+    } else {
+      cookieBtn.disabled = true
+      cursorBtn.disabled = false
+      teller = 0
     }
-  });
-  
-  countCookie.addEventListener('DOMSubtreeModified',function(){
-    if(parseInt(countCookie.textContent,10) >= 100){
-      omaBtn.disabled = false;
-    }else{
-      omaBtn.disabled = true;
-    }
-  });
+  })
 }
 
-function cursor(){
-  newCounter = count-=10;
-  countCookie.innerText = newCounter;
+function cursor() {
+  newCounter = count += 2
+  countCookie.innerText = newCounter
 }
-function oma(){
-  newCounter = count-=100;
-  countCookie.innerText = newCounter;
-}
-cursorBtn.addEventListener("click",cursor)
-omaBtn.addEventListener("click",oma)
 
+cursorBtn.addEventListener('click', cursor)
+
+function ButtonStyle() {
+  const styleCursor = document.querySelector('.cursor')
+  styleCursor.classList.add('btn')
+  styleCursor.classList.add('btn-primary')
+  const styleBtnCookie = document.querySelector('.btnCookie')
+  styleBtnCookie.classList.add('btn')
+  styleBtnCookie.classList.add('btn-primary')
+}
 
 powerLock()
 disable()
-
+ButtonStyle()
