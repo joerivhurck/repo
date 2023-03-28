@@ -18,13 +18,21 @@
       }
       .containerButton {
         background-color: rgb(142, 60, 60);
-        width: 15%;
+        width: 250px;
         height: 100vh;
         display: flex;
-
+        flex-direction: column;
         align-items: center;
         justify-content: center;
       }
+      .upgrade {
+        width: 250px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       .counter {
         background-color: white;
         border: 1px solid black;
@@ -65,6 +73,9 @@
   <body>
     <div class="container-fluid">
       <div class="containerButton">
+        <div class="upgrade">
+          <button class="btnUpgrade">upgrade here!</button>
+        </div>
         <div class="ctn">
           <div class="counter"></div>
           <div class="containerPowerUps">
