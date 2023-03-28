@@ -1,5 +1,6 @@
 let count = 0
 let clickCount = 0
+const timer = 1000
 
 const cookieBtn = document.querySelector('.btnCookie')
 cookieBtn.addEventListener('click', clickCookie)
@@ -24,13 +25,9 @@ function disable() {
 
 function powerLock() {
   countCookie.addEventListener('DOMSubtreeModified', function () {
-    if (clickCount < 10) {
-      cookieBtn.disabled = false
-      cursorBtn.disabled = true
-    } else {
+    if (clickCount >= 10) {
       cookieBtn.disabled = true
       cursorBtn.disabled = false
-      clickCount = 0
     }
   })
 }
@@ -50,13 +47,16 @@ function upgradeCost() {
   countCookie.innerText = upgradeCounter
 }
 function cursor() {
+  cookieBtn.disabled = false
+  cursorBtn.disabled = true
+  clickCount = 0
   let newCounter = (count += 2)
   countCookie.innerText = newCounter
 }
 let gameloopInterval = null
 function toggleAutoPlay() {
   if (gameloopInterval === null) {
-    gameloopInterval = setInterval(gameloop, 1000)
+    gameloopInterval = setInterval(gameloop, timer)
   }
 }
 
