@@ -1,0 +1,9 @@
+Wat is Vite?
+
+The Vite platform supports programming using several languages 
+and frameworks to develop decentralized applications (DApps) and smart contracts.
+
+Wat zijn de alternatieven?
+Webpack, gulp, Grunt, rollup, and Parcel
+
+Waarom zouden we dit gebruiken i.p.v. gewoon html, css en js te gebruiken zonder Vite?
